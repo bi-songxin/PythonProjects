@@ -36,7 +36,7 @@ obj3 = re.compile(r'◎片　　名　(?P<movie>.*?)<br />.*?'
                   r'<td style="WORD-WRAP: break-word" bgcolor="#fdfddf"><a href="(?P<maget>.*?)">',re.S)
 
 result1 = obj.finditer(resp.text)
-# print(result1) #迭代器<callable_iterator object at 0x1248cebf0>
+# print(result1) #迭代器<callable_iterator object at 0x12b0dae60>
 child_href_list =[]
 
 for it in result1:
