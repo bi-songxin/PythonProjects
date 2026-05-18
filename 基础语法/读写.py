@@ -10,3 +10,12 @@ while True:
         # f.write(f'{name}\n')
         f.write(name+'\n')
         print(f'欢迎{name}!并新增一条记录！')
+
+"""
+注意：
+使用open函数时，在w、a、x模式下会自动创建文件保存在同目录下，但是要指定没有创建的文件夹下的文件则会报错
+with open('guest_book.txt','a',encoding='utf-8') as f:  #能自动创建
+
+with open('books/guest_book.txt','a',encoding='utf-8') as f:  #报错，books没有创建过不能保存，必须使用os.makedirs创建文件夹
+
+"""
