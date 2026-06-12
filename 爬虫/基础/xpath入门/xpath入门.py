@@ -45,7 +45,7 @@ html ="""
 </book>
 """
 
-# tree = etree.XML(html)
+tree = etree.XML(html)
 # result = tree.xpath("/book") # /表示层级关系。第一个/是根节点  [<Element book at 0x10d69bb00>]
 
 # result = tree.xpath("/book/name")  #[<Element name at 0x11f5a1500>]
@@ -59,8 +59,8 @@ html ="""
 # result = tree.xpath("/book/author//nick/text()")  #['周大强', '周芷若', '周杰伦', '蔡依林', '惹了1', '惹了2']
 
 # * 表任意节点 类似.通配符
-# result = tree.xpath("/book/author/*/nick/text()")  #['惹了1', '惹了2']
-# print(result)
+result = tree.xpath("/book/author/*/nick/text()")  #['惹了1', '惹了2']
+print(result)
 
 
 
@@ -84,18 +84,18 @@ tree2 = etree.parse(file_path)
 
 
 # 法一
-ol_li_list = tree2.xpath("/html/body/ol/li")
-#从每一个li中提取文字信息
-for li in ol_li_list:
-    # .相对查找
-    # result1 = li.xpath("./a/text()") #在li中继续查找
-    # print(result1)
-    # 拿属性值：@属性值
-    result2 = li.xpath("./a/@href")
-    print(result2)
+# ol_li_list = tree2.xpath("/html/body/ol/li")
+# #从每一个li中提取文字信息
+# for li in ol_li_list:
+#     # .相对查找
+#     # result1 = li.xpath("./a/text()") #在li中继续查找
+#     # print(result1)
+#     # 拿属性值：@属性值
+#     result2 = li.xpath("./a/@href")
+#     print(result2)
 
 # 法二
-print(tree2.xpath("/html/body/ol/li/a/@href"))
+# print(tree2.xpath("/html/body/ol/li/a/@href"))
 
 
 
