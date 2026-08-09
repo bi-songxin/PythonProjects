@@ -2,7 +2,7 @@ import re
 
 # findall（用的并不多） 匹配字符串中所有符合正则的内容，返回列表
 # lst = re.findall(r'\d+','我的电话号码是10086，我女朋友的电话号码是10010')
-# print(lst)
+# print(lst) #['10086', '10010']
 
 
 # finditer（最重要） 匹配字符串中所有符合正则的内容，返回迭代器，从迭代器中拿到内容需要.group()
@@ -19,7 +19,7 @@ import re
 # print(s.group())  #10086
 
 
-# match，从头开始匹配
+# match（用的并不多），从头开始匹配
 # ss = re.match(r'\d+','10086，我女朋友的电话号码是10010')
 # print(ss)   #None
 # print(ss.group())
@@ -32,10 +32,12 @@ import re
 #
 # for match in ret:
 #     print(match.group())
-#
-#
+
+# 10086
+# 10010
+
 # ret1 = obj.findall('我的电话号码是10086，我女朋友的电话号码是10010')
-# print(ret1)
+# print(ret1) #['10086', '10010']
 
 
 sss = """
