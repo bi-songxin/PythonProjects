@@ -1,0 +1,8 @@
+# 忽略所有层级下的 .vscode 文件夹
+.vscode/
+
+# 忽略所有层级下的 .DS_Store 文件（macOS 系统文件）
+.DS_Store
+
+# 忽略所有层级下的 .idea 文件夹（JetBrains/WebStorm/PyCharm 等配置）
+.idea/
