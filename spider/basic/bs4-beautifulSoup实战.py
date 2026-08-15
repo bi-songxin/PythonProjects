@@ -30,11 +30,13 @@ page = bs(resp.text, 'html.parser')  # 指定html解析器
 title_name = page.find("title")
 print(title_name)
 
-# page_content = page.find("div",class_="rich-content topic-richtext")  #class是py的关键字，这里使用class_
-# print(page_content)
+
 
 with open('菜价.csv', 'wb') as f:
     csvwirter = csv.writer(f)
+
+    # page_content = page.find("div",class_="rich-content topic-richtext")  #class是py的关键字，这里使用class_
+    # print(page_content)
     page_content = page.find("div", attrs={"class": "rich-content topic-richtext"})  # 和上面等价，此时可以避免class
     print(page_content)
 

@@ -15,7 +15,7 @@ url = "https://ynheang.cn/farm-machine/newMap/PatrollingField/listAll"
 params = {
     "farmerName": "杨双芝"
 }
-response = requests.get(url, headers=headers, params=params,impersonate="chrome120")
+response = requests.get(url, headers=headers, params=params,impersonate="chrome120",timeout=10)
 
 result = response.json()
 result_list = result['result']
