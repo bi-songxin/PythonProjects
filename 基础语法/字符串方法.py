@@ -45,8 +45,11 @@
 # print(sssss.replace(' ',''))
 
 sa = '张三_李四_王五_赵六'
-lst = sa.split('_') #字符串切割，结果输出成列表
+lst = sa.split('_',1) #正向字符串切割，结果输出成列表
 print(lst)
+
+rlst = sa.rsplit('_', 2) #倒向字符串切割
+print(rlst)
 
 lst1 = ['张三', '李四', '王五', '赵六']
 sb = '_'.join(lst1) #字符串拼接，结果输出成字符串

@@ -4,10 +4,13 @@
 try:
     你认为会出错的代码
 
+(捕获任意错误，使得程序免于崩溃)
 except 要捕捉具体错误类型:
+except的顺序写法：因为精确错误如何没有发生，但发生了其它大错误。我们必须把“具体的、范围小的错误”放在上面，把“模糊的、范围大的通用错误（如 Exception）”放在最下面。
 
-(任意错误)
-except:
+except IOError as io_err:
+
+except Exception as e:
 
 (如果没有异常执行这块代码)
 else:
